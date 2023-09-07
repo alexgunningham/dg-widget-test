@@ -7,25 +7,30 @@
         <link href="style.css" rel="stylesheet" />
     </head>
     <body>
-        <script src="https://chat-assets.digitalgenius.com/dgchatinit.widget.v1.1.0.min.js"></script>
-        <script>window.dgchat.init()</script>
+        <main class="main">
         <script>
             window.DG_CHAT_WIDGET_CONFIG = {
                 flowUrl: 'https://flow-server.eu.dgdeepai.com',
-                widgetId: '55d42ad2-39db-4fdd-8b57-d4e0ed35ba6d',
+                widgetId: '7849cd40-292c-4f69-9823-c5f09ae03f00',
             }
         </script>
-        <p class="el1">send message</p>
-        <p class="el2">trigger widget</p>
+        <script src="https://chat-assets.digitalgenius.com/dgchatinit.widget.v1.1.0.min.js"></script>
+        <script>window.dgchat.init()</script>
+
+        <button onclick="sendMessage()" class="button">Send message</button>
+        <button onclick="launchWidget()" class="button">Launch widget</button>
+
+        </main>
         <script>
-          const element = document.querySelector('.el1');
-           element.addEventListener("click", () => {
-             window.dgchat.methods.sendMessage('Some custom message to be sent on the customers behalf');
-           }, false);
-           const element1 = document.querySelector('.el2');
-           element1.addEventListener("click", () => {
-             window.dgchat.methods.launchWidget();
-           }, false);
+            function sendMessage() {
+                console.log('hit1')
+                window.dgchat.methods.sendMessage('Some custom message to be sent on the customers behalf');
+            }
+
+            function launchWidget () {
+                console.log('hit2')
+                window.dgchat.methods.launchWidget();
+            }
         </script>
     </body> 
 </html>
