@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main class="main">
+        <script>
+            window.DG_CHAT_WIDGET_CONFIG = {
+                flowUrl: 'https://flow-server.eu.dgdeepai.com',
+                widgetId: 'f0c07546-af4c-4963-9e23-3e9343eaf13b',
+                env: 'dev.us',
+                generalSettings: {
+                    delayBetweenBotMessages: 400
+                }
+            }
+        </script>
+        <script src="https://chat-assets.digitalgenius.com/ag-animation-test-init.min.js"></script>
+        <script>window.dgchat.init()</script>
+
+        <button onclick="sendMessage()" class="button">Send message</button>
+        <button onclick="launchWidget()" class="button">Launch widget</button>
+
+        </main>
+        <script>
+            function sendMessage() {
+                window.dgchat.methods.sendMessage('Some custom message to be sent on the customers behalf');
+            }
+
+            function launchWidget () {
+                window.dgchat.methods.launchWidget();
+            }
+        </script>
+    </body> 
+</html>
