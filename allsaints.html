@@ -11,7 +11,7 @@
               width: 120px;
             }
 
-            @media screen and (min-width: 600px) {
+            @media screen and (max-width: 600px) {
                 #dg-chat-widget-launcher {
                     width: 60px;
                 }
@@ -59,13 +59,8 @@
                         height: '54px',
                         },
                     }
-                    },
-                    proactiveButtonsSettings: {
-                    isEnabled: true,
-                    questions: ['What can I help with?'],
-                    answers: ['Product', 'Where\'s my package?']
-                    },
-                    theme: {
+                },
+                theme: {
                     breakpoints: {
                         mobile: '600px'
                     }
