@@ -1,71 +1,238 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <link href="style.css" rel="stylesheet" />
-        <style>
-            #dg-chat-widget-launcher {
-              height: 65px;
-              width: 120px;
-            }
 
-            @media screen and (max-width: 600px) {
-                #dg-chat-widget-launcher {
-                    width: 70px;
-                    height: 70px;
-                }
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="style.css" rel="stylesheet" />
+    <style>
+        #dg-chat-widget-launcher {
+            height: 65px;
+            width: 120px;
+        }
+
+        #dg-chat-widget-proactive {
+            bottom: 80px;
+        }
+
+        @media screen and (max-width: 767px) {
+            #dg-chat-widget-launcher {
+                height: 72px;
+                width: 65px;
             }
-          
-            #dg-chat-widget-proactive {
-              bottom: 80px;
-            }
-        </style>
-    </head>
-    <body>
-        <main class="main">
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main">
         <script>
             window.DG_CHAT_WIDGET_CONFIG = {
+                widgetId: '9c2d7d28-1fa7-459a-93f2-13ac4ad3b487',
                 flowUrl: 'https://flow-server.dev.us.dgdeepai.com',
-                widgetId: 'f0c07546-af4c-4963-9e23-3e9343eaf13b',
-                version: "1.1.2",
-                embedVersion: "1.6.1",
-                initVersion: "1.1.0",
-                env: 'dev.us',
-                generalSettings: {
-                    delayBetweenBotMessages: 1000,
-                    executeWidgetOnChatLaunch: true,
+                // generalSettings: {
+                //   delayBetweenBotMessages: 2500
+                // },
+                // callbacks: {
+                //   onChatInitialised: () => {console.log('launched')},
+                //   onServerStateRetrieved: (chatState) => {console.log('chat state in callback', chatState); }
+                // },
+                "draft": false,
+                "created_at": "2023-08-09T09:45:22.069",
+                "updated_at": "2023-09-29T10:50:16.800",
+                "bot": {
+                    "name": "Milo",
+                    "avatar": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTgiIGN5PSIxOCIgcj0iMTcuNSIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siLz4KPHBhdGggZD0iTTEwIDIzLjk5NTRWMjMuNTgxMUMxMC42MzI4IDIzLjUxNjMgMTEuMTA3NCAyMy4zMDExIDExLjQyMzcgMjIuOTM1NUMxMS43NDAxIDIyLjU2OTkgMTIuMjgwOCAyMS41NjU2IDEzLjA1MDYgMTkuOTI5NUwxOC4xNzQyIDlIMTguNjYyOUwyNC43OSAyMS42MjU3QzI1LjE5ODUgMjIuNDYxMSAyNS41MjQzIDIyLjk3OTUgMjUuNzY5OSAyMy4xNzg1QzI2LjAxMzEgMjMuMzc3NSAyNi40MjM5IDIzLjUxMTcgMjcgMjMuNTgzNVYyMy45OTc3SDIwLjc0NTRWMjMuNTgzNUMyMS40NjMyIDIzLjUyNTYgMjEuOTI4MyAyMy40NTYyIDIyLjEzNjEgMjMuMzcyOUMyMi4zNDM5IDIzLjI4OTYgMjIuNDQ3OCAyMy4wODU5IDIyLjQ0NzggMjIuNzYyQzIyLjQ0NzggMjIuNjUzMiAyMi40MDc2IDIyLjQ2MzQgMjIuMzI3NCAyMi4xODgxQzIyLjI0NzEgMjEuOTE1IDIyLjEzNjEgMjEuNjI1NyAyMS45OTIxIDIxLjMyMjZMMjEuMDA3NSAxOS4xNzk3SDE0LjUyNjNDMTMuODg2NCAyMC42Mzc2IDEzLjUwNjIgMjEuNTI2MiAxMy4zODExIDIxLjg0NzlDMTMuMjU2IDIyLjE2OTUgMTMuMTk0NiAyMi40MjQxIDEzLjE5NDYgMjIuNjExNUMxMy4xOTQ2IDIyLjk4NjQgMTMuMzYyMiAyMy4yNDU2IDEzLjY5NzUgMjMuMzkxNEMxMy45MDUzIDIzLjQ3NyAxNC4yOTcyIDIzLjU0MTggMTQuODcxIDIzLjU4NThWMjRIMTBWMjMuOTk1NFpNMjAuNTkxOSAxOC4yNzQ5TDE3Ljc3MjggMTIuMTQyNUwxNC45NDE4IDE4LjI3NDlIMjAuNTkxOVoiIGZpbGw9IiMwRTBEMEQiLz4KPC9zdmc+Cg=="
                 },
-                styles: {
-                    icons: {
-                        Launcher: '<svg width="82" height="38" viewBox="0 0 82 38" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="79.6" height="36.3" rx="18.15" fill="black"/><path d="M17 14C17 13.4477 17.4477 13 18 13H28.6C29.1523 13 29.6 13.4477 29.6 14V21.9749C29.6 22.5272 29.1523 22.9749 28.6 22.9749H22.8L20.3 25.3V22.9749H18C17.4477 22.9749 17 22.5272 17 21.9749V14Z" stroke="white"/><circle cx="23.3" cy="18.22" r="0.72" fill="white"/><circle cx="26.1799" cy="18.22" r="0.72" fill="white"/><circle cx="20.42" cy="18.22" r="0.72" fill="white"/><path d="M39.547 18.062C39.547 19.855 40.339 20.977 41.758 20.977C42.88 20.977 43.397 20.339 43.551 19.536H44.97C44.695 21.065 43.639 22.132 41.758 22.132C39.558 22.132 38.062 20.504 38.062 18.062C38.062 15.642 39.558 14.014 41.758 14.014C43.639 14.014 44.695 15.07 44.97 16.61H43.551C43.397 15.807 42.88 15.169 41.758 15.169C40.339 15.169 39.547 16.28 39.547 18.062ZM48.1326 17.358C48.4076 16.709 49.0236 16.28 49.8706 16.28C51.1466 16.28 51.9166 17.072 51.9166 18.414V22H50.5086V18.744C50.5086 17.853 50.1236 17.391 49.3866 17.391C48.6826 17.391 48.1326 17.842 48.1326 18.964V22H46.7246V13.904H48.1326V17.358ZM57.4774 22C57.4224 21.692 57.4004 21.395 57.4004 21.12C57.1364 21.758 56.4324 22.121 55.5414 22.121C54.4524 22.121 53.6604 21.516 53.6604 20.504C53.6604 19.382 54.5404 18.92 55.6734 18.788L57.3454 18.601V18.337C57.3454 17.655 56.9274 17.325 56.2894 17.325C55.6734 17.325 55.2994 17.666 55.2554 18.183H53.9024C54.0234 16.984 54.9584 16.28 56.3334 16.28C57.8514 16.28 58.7204 16.995 58.7204 18.447V20.603C58.7204 21.12 58.7424 21.549 58.8304 22H57.4774ZM55.9264 21.142C56.6524 21.142 57.3454 20.713 57.3454 19.833V19.492L56.1024 19.635C55.5084 19.712 55.0574 19.844 55.0574 20.427C55.0574 20.867 55.3654 21.142 55.9264 21.142ZM63.8428 20.845V21.923C63.4028 22.055 63.0728 22.088 62.7318 22.088C61.5658 22.088 60.9938 21.593 60.9938 20.471V17.424H60.2238V16.412H60.9938V15.015H62.3908V16.412H63.7218V17.424H62.3798V20.251C62.3798 20.779 62.6328 20.955 63.1058 20.955C63.3148 20.955 63.5348 20.933 63.8428 20.845Z" fill="white"/><rect x="1" y="1" width="79.6" height="36.3" rx="18.15" stroke="white"/></svg>',
-                        LauncherMobile: '<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_d_43_95)"><circle cx="20" cy="19" r="17" fill="black"/><circle cx="20" cy="19" r="17.5" stroke="white"/></g><path d="M14 15C14 14.4477 14.4477 14 15 14H25.6C26.1523 14 26.6 14.4477 26.6 15V22.9749C26.6 23.5272 26.1523 23.9749 25.6 23.9749H19.8L17.3 26.3V23.9749H15C14.4477 23.9749 14 23.5272 14 22.9749V15Z" stroke="white"/><circle cx="20.3" cy="19.22" r="0.72" fill="white"/><circle cx="23.18" cy="19.22" r="0.72" fill="white"/><circle cx="17.42" cy="19.22" r="0.72" fill="white"/><defs><filter id="filter0_d_43_95" x="0" y="0" width="40" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="1"/><feGaussianBlur stdDeviation="1"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 0.241667 0 0 0 0 0.197401 0 0 0 0 0.0835764 0 0 0 0.05 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_43_95"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_43_95" result="shape"/></filter></defs></svg>',
+                "crm": {
+                    "handover": true,
+                    "platform": "zendesk",
+                    "accountKey": "4Z1AhKoTeHU7NR0dGWrGVNGTqSL41tQr",
+                    "connectionId": "67f708c5-5ff7-4137-8159-b862a9efe3f5",
+                    "cookieDomain": "allsaints.com"
+                },
+                "env": "eu",
+                "lang": {
+                    "flow": {
+                        "defaultErrorMessage": "We were unable to handle your request. Please try again"
                     },
-                    widgetStyles: {
+                    "agent": {
+                        "agentJoined": "An agent joined the chat",
+                        "agentJoining": "An agent is joining",
+                        "queueMessage": "You are in a queue.",
+                        "agentEndedChat": "Agent left the chat",
+                        "couldNotConnect": "Could not connect to any agents",
+                        "namedAgentJoined": "joined the chat",
+                        "agentDisconnected": "The agent disconnected",
+                        "couldNotUploadFile": "There was an problem uploading your file. Please try again.",
+                        "connectingToAnAgent": "Connecting you with an agent",
+                        "namedAgentEndedChat": "left the chat",
+                        "agentTransferredChat": "You are being transferred to another agent",
+                        "automatedAgentMessage": "An agent will assist you shortly",
+                        "namedAgentDisconnected": "disconnected",
+                        "chatEndedDueToInactivity": "Chat ended due to inactivity",
+                        "disconnectedReconnecting": "You were disconnected. Connecting you to another agent",
+                        "queueMessageWithPosition": "You are in a queue. Your position is"
+                    },
+                    "header": "ALLSAINTS CHAT",
+                    "endChatHeader": "End Chat",
+                    "endChatQuestion": "Are you sure you want to end chat?",
+                    "fileUploadErrors": {
+                        "virus": {
+                            "descr": "This file may contain a virus or other malware and can't be uploaded. Try another file.",
+                            "title": "Oops!"
+                        },
+                        "generic": {
+                            "descr": "There was a problem uploading this file. Try another file.",
+                            "title": "Oops!"
+                        },
+                        "tooLarge": {
+                            "descr": "Files that are more than 16MB cannot be uploaded. Try another file.",
+                            "title": "Too Big!"
+                        }
+                    },
+                    "dragAndDropMessage": "Drag and drop file here",
+                    "attachmentsMenuFile": "Add File",
+                    "endChatCancelButton": "Cancel",
+                    "chatInputPlaceholder": "Type message here",
+                    "endChatConfirmButton": "End chat",
+                    "newMessageNotifyText": "New Message",
+                    "messageLimitErrorText": "Oops, that message is too long",
+                    "attachmentsMenuPicture": "Add Picture",
+                    "startNewChatButtonText": "Start New Chat",
+                    "attachmentsMenuLocation": "Add Location",
+                    "idleTimeoutPrefixMessage": "Are you still there? Please send a message within",
+                    "idleTimeoutSuffixMessage": "or this chat will time out",
+                    "prechatConfirmationMessage": "Give us few minutes to find your order",
+                    "carouselSelectionButtonText": "Select"
+                },
+                "theme": {
+                    "colors": {
+                        "brand": "#000000",
+                        "error": "rgb(231, 29, 69)",
+                        "primary": "#666",
+                        "secondary": "#fff",
+                        "welcomeScreenBg": "#fbfbfa"
+                    },
+                    "breakpoints": {
+                        "mobile": "767px"
+                    }
+                },
+                "flowId": "4c227343-9690-4ec5-a9ff-a6c8c215e1e4",
+                "styles": {
+                    "fonts": [
+                        {
+                            "url": "https://www.allsaints.com/on/demandware.static/Sites-allsaints-uk-Site/-/default/dw01364333/fonts/UntitledSans-Regular.woff2",
+                            "role": "primary",
+                            "type": "woff2",
+                            "fontFamily": "UntitledSans-Regular"
+                        },
+                        {
+                            "url": "https://www.allsaints.com/on/demandware.static/Sites-allsaints-uk-Site/-/default/dw01364333/fonts/UntitledSans-Regular.woff2",
+                            "type": "woff2",
+                            "fontFamily": "UntitledSans-Regular"
+                        }
+                    ],
+                    "icons": {
+                        "Launcher": '<svg width="82" height="38" viewBox="0 0 82 38" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="79.6" height="36.3" rx="18.15" fill="black"/><path d="M17 14C17 13.4477 17.4477 13 18 13H28.6C29.1523 13 29.6 13.4477 29.6 14V21.9749C29.6 22.5272 29.1523 22.9749 28.6 22.9749H22.8L20.3 25.3V22.9749H18C17.4477 22.9749 17 22.5272 17 21.9749V14Z" stroke="white"/><circle cx="23.3" cy="18.22" r="0.72" fill="white"/><circle cx="26.1799" cy="18.22" r="0.72" fill="white"/><circle cx="20.42" cy="18.22" r="0.72" fill="white"/><path d="M39.547 18.062C39.547 19.855 40.339 20.977 41.758 20.977C42.88 20.977 43.397 20.339 43.551 19.536H44.97C44.695 21.065 43.639 22.132 41.758 22.132C39.558 22.132 38.062 20.504 38.062 18.062C38.062 15.642 39.558 14.014 41.758 14.014C43.639 14.014 44.695 15.07 44.97 16.61H43.551C43.397 15.807 42.88 15.169 41.758 15.169C40.339 15.169 39.547 16.28 39.547 18.062ZM48.1326 17.358C48.4076 16.709 49.0236 16.28 49.8706 16.28C51.1466 16.28 51.9166 17.072 51.9166 18.414V22H50.5086V18.744C50.5086 17.853 50.1236 17.391 49.3866 17.391C48.6826 17.391 48.1326 17.842 48.1326 18.964V22H46.7246V13.904H48.1326V17.358ZM57.4774 22C57.4224 21.692 57.4004 21.395 57.4004 21.12C57.1364 21.758 56.4324 22.121 55.5414 22.121C54.4524 22.121 53.6604 21.516 53.6604 20.504C53.6604 19.382 54.5404 18.92 55.6734 18.788L57.3454 18.601V18.337C57.3454 17.655 56.9274 17.325 56.2894 17.325C55.6734 17.325 55.2994 17.666 55.2554 18.183H53.9024C54.0234 16.984 54.9584 16.28 56.3334 16.28C57.8514 16.28 58.7204 16.995 58.7204 18.447V20.603C58.7204 21.12 58.7424 21.549 58.8304 22H57.4774ZM55.9264 21.142C56.6524 21.142 57.3454 20.713 57.3454 19.833V19.492L56.1024 19.635C55.5084 19.712 55.0574 19.844 55.0574 20.427C55.0574 20.867 55.3654 21.142 55.9264 21.142ZM63.8428 20.845V21.923C63.4028 22.055 63.0728 22.088 62.7318 22.088C61.5658 22.088 60.9938 21.593 60.9938 20.471V17.424H60.2238V16.412H60.9938V15.015H62.3908V16.412H63.7218V17.424H62.3798V20.251C62.3798 20.779 62.6328 20.955 63.1058 20.955C63.3148 20.955 63.5348 20.933 63.8428 20.845Z" fill="white"/><rect x="1" y="1" width="79.6" height="36.3" rx="18.15" stroke="white"/></svg>',
+                        "LauncherMobile": '<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_d_43_95)"><circle cx="20" cy="19" r="17" fill="black"/><circle cx="20" cy="19" r="17.5" stroke="white"/></g><path d="M14 15C14 14.4477 14.4477 14 15 14H25.6C26.1523 14 26.6 14.4477 26.6 15V22.9749C26.6 23.5272 26.1523 23.9749 25.6 23.9749H19.8L17.3 26.3V23.9749H15C14.4477 23.9749 14 23.5272 14 22.9749V15Z" stroke="white"/><circle cx="20.3" cy="19.22" r="0.72" fill="white"/><circle cx="23.18" cy="19.22" r="0.72" fill="white"/><circle cx="17.42" cy="19.22" r="0.72" fill="white"/><defs><filter id="filter0_d_43_95" x="0" y="0" width="40" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="1"/><feGaussianBlur stdDeviation="1"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 0.241667 0 0 0 0 0.197401 0 0 0 0 0.0835764 0 0 0 0.05 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_43_95"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_43_95" result="shape"/></filter></defs></svg>',
+                    },
+                    "widgetStyles": {
+                        ".dg-chat-header-wrapper": {
+                            "fontSize": "13px",
+                            "letterSpacing": "2px"
+                        },
+                        ".dg-chat-quick-reply:hover": {
+                            "color": "#fff",
+                            "background": "#000"
+                        },
+                        ".dg-messages-group-service div .dg-message-bubble": {
+                            "background": "#f0f0f0"
+                        },
+                        ".dg-chat-launcher-button, .dg-chat-launcher-button:hover": {
+                            "background": "transparent"
+                        },
                         '.dg-chat-launcher-button': {
-                        width: 'initial',
-                        height: 'initial',
-                        background: 'none',
-                        border: 'none',
-                        borderRadius: 'initial'
+                            "width": 'initial',
+                            "height": 'initial',
+                            "background": 'none',
+                            "border": 'none',
+                            "borderRadius": 'initial'
                         },
-
                         '.dg-chat-launcher-button .dg-chat-icon-wrapper': {
-                        width: '100px',
-                        height: '47px',
+                            "width": '100px',
+                            "height": '47px',
                         },
-
                         '.dg-chat-launcher-button-mobile .dg-chat-icon-wrapper': {
-                        width: '54px',
-                        height: '54px',
+                            "width": '54px',
+                            "height": '54px',
                         },
                     }
                 },
-                theme: {
-                    breakpoints: {
-                        mobile: '600px'
-                    }
+                "flowUrl": "https://flow-server.eu.dgdeepai.com",
+                "version": "1.1.2",
+                "crmAgent": {
+                    "name": "",
+                    "avatar": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTgiIGN5PSIxOCIgcj0iMTcuNSIgZmlsbD0id2hpdGUiIHN0cm9rZT0iYmxhY2siLz4KPHBhdGggZD0iTTEwIDIzLjk5NTRWMjMuNTgxMUMxMC42MzI4IDIzLjUxNjMgMTEuMTA3NCAyMy4zMDExIDExLjQyMzcgMjIuOTM1NUMxMS43NDAxIDIyLjU2OTkgMTIuMjgwOCAyMS41NjU2IDEzLjA1MDYgMTkuOTI5NUwxOC4xNzQyIDlIMTguNjYyOUwyNC43OSAyMS42MjU3QzI1LjE5ODUgMjIuNDYxMSAyNS41MjQzIDIyLjk3OTUgMjUuNzY5OSAyMy4xNzg1QzI2LjAxMzEgMjMuMzc3NSAyNi40MjM5IDIzLjUxMTcgMjcgMjMuNTgzNVYyMy45OTc3SDIwLjc0NTRWMjMuNTgzNUMyMS40NjMyIDIzLjUyNTYgMjEuOTI4MyAyMy40NTYyIDIyLjEzNjEgMjMuMzcyOUMyMi4zNDM5IDIzLjI4OTYgMjIuNDQ3OCAyMy4wODU5IDIyLjQ0NzggMjIuNzYyQzIyLjQ0NzggMjIuNjUzMiAyMi40MDc2IDIyLjQ2MzQgMjIuMzI3NCAyMi4xODgxQzIyLjI0NzEgMjEuOTE1IDIyLjEzNjEgMjEuNjI1NyAyMS45OTIxIDIxLjMyMjZMMjEuMDA3NSAxOS4xNzk3SDE0LjUyNjNDMTMuODg2NCAyMC42Mzc2IDEzLjUwNjIgMjEuNTI2MiAxMy4zODExIDIxLjg0NzlDMTMuMjU2IDIyLjE2OTUgMTMuMTk0NiAyMi40MjQxIDEzLjE5NDYgMjIuNjExNUMxMy4xOTQ2IDIyLjk4NjQgMTMuMzYyMiAyMy4yNDU2IDEzLjY5NzUgMjMuMzkxNEMxMy45MDUzIDIzLjQ3NyAxNC4yOTcyIDIzLjU0MTggMTQuODcxIDIzLjU4NThWMjRIMTBWMjMuOTk1NFpNMjAuNTkxOSAxOC4yNzQ5TDE3Ljc3MjggMTIuMTQyNUwxNC45NDE4IDE4LjI3NDlIMjAuNTkxOVoiIGZpbGw9IiMwRTBEMEQiLz4KPC9zdmc+Cg=="
+                },
+                "customer": "allsaints",
+                "metadata": {
+                    "url": "window.location.href"
+                },
+                "csatFlowId": "d6ed0124-9db5-4f43-83f7-2a98921086c8",
+                "prechatForm": {
+                    "fields": [
+                        {
+                            "name": "name",
+                            "type": "text",
+                            "label": "Name",
+                            "options": {},
+                            "metadata": {
+                                "systemField": "name"
+                            },
+                            "required": true,
+                            "placeholder": "Enter your name"
+                        },
+                        {
+                            "name": "emailaddress",
+                            "type": "email",
+                            "label": "Email Address",
+                            "options": {},
+                            "metadata": {
+                                "systemField": "email"
+                            },
+                            "required": true,
+                            "placeholder": "Enter your email address"
+                        }
+                    ],
+                    "isEnabled": true,
+                    "welcomeMessage": "<p><h2 style='font-size:9vw;''><b>Hi, I&#39;m Milo 🖤</b></h2></br></span></p><p>Welcome to AllSaints Live Chat</p><p>Please enter your name and email address below to get started</p></br></br>"
+                },
+                "embedVersion": "1.6.0",
+                "generalSettings": {
+                    "headerIcon": "",
+                    "isChatLauncherEnabled": true,
+                    "maskCreditCardNumbers": false,
+                    "hasDragAndDropAttachment": false,
+                    "executeWidgetOnChatLaunch": false,
+                    "customerInitiatedCSATEnabled": true,
+                    "crmConversationHasAttachments": true,
+                    "dgBotConversationHasAttachments": true
+                },
+                "useLocalStorage": true,
+                "externalAccountKey": "sdibfsiubdsd87sd8s*&*^&%sdd",
+                "customerCsatOptions": {
+                    "buttons": [
+                        {
+                            "text": "😍 - It was great!"
+                        },
+                        {
+                            "text": "😐 - It was okay"
+                        },
+                        {
+                            "text": "😞 - Not the best"
+                        }
+                    ]
                 }
             }
         </script>
@@ -75,15 +242,16 @@
         <button onclick="sendMessage()" class="button">Send message</button>
         <button onclick="launchWidget()" class="button">Launch widget</button>
 
-        </main>
-        <script>
-            function sendMessage() {
-                window.dgchat.methods.sendMessage('Some custom message to be sent on the customers behalf');
-            }
+    </main>
+    <script>
+        function sendMessage() {
+            window.dgchat.methods.sendMessage('Some custom message to be sent on the customers behalf');
+        }
 
-            function launchWidget () {
-                window.dgchat.methods.launchWidget();
-            }
-        </script>
-    </body> 
+        function launchWidget() {
+            window.dgchat.methods.launchWidget();
+        }
+    </script>
+</body>
+
 </html>
