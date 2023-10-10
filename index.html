@@ -9,6 +9,9 @@
     <body>
         <main class="main">
             <script>
+                const url = new URL(window.location.href);
+                const delay = url.searchParams.get("delay");
+                const animationDuration = url.searchParams.get("animationDuration");
                 // FULL DEMO - handover to salesforce
                 window.DG_CHAT_WIDGET_CONFIG = {
                   "id": "4b0339c2-095c-44df-8b02-3baec7e3d262",
@@ -131,7 +134,8 @@
                     "customerInitiatedCSATEnabled": true,
                     "crmConversationHasAttachments": false,
                     "dgBotConversationHasAttachments": false,
-                    "delayBetweenBotMessages": 1000
+                    delayBetweenBotMessages: delay || 1000,
+                    messageAnimationDuration: animationDuration || 400
                   },
                   "useLocalStorage": true,
                   "externalAccountKey": "eW(123wdvAhWdcT)8)a64",
