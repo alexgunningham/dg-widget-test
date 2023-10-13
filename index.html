@@ -15,84 +15,17 @@
       const animationDuration = url.searchParams.get("animationDuration");
 
       window.DG_CHAT_WIDGET_CONFIG = {
-        "id": "f0c07546-af4c-4963-9e23-3e9343eaf13b",
-        "organization_id": "184927ba-9226-473b-8270-f524706fac82",
-        "draft": false,
-        "created_at": "2023-08-12T16:05:27.311",
-        "updated_at": "2023-09-26T07:27:10.427",
-        "bot": {
-          "name": "DigitalGenius Bot",
-          "avatar": "data:image/png;base64,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"
+        widgetId: 'f0c07546-af4c-4963-9e23-3e9343eaf13b',
+        env: 'dev.us',
+        prechatForm: {
+          isEnabled: false,
         },
-        "csat": {
-          "isEnabled": true
-        },
-        "lang": {
-          "header": "DigitalGenius"
-        },
-        "name": "Chat Widget",
-        "flowId": "6f293599-ba01-4346-b9db-399a8efaaa4c",
-        "styles": {},
-        "flowUrl": "https://flow-server.dev.us.dgdeepai.com",
-        "version": "2.0.0-rc.4",
-        "crmAgent": {
-          "name": "DigitalGenius Agent",
-          "avatar": "https://nadia.fra1.cdn.digitaloceanspaces.com/DG.png"
-        },
-        "customer": "radu-ltd",
-        "prechatForm": {
-          "fields": [
-            {
-              "name": "displayname",
-              "type": "text",
-              "label": "Display Name",
-              "options": {},
-              "metadata": {
-                "systemField": "name"
-              },
-              "required": true,
-              "placeholder": "Enter a display name"
-            },
-            {
-              "name": "emailaddress",
-              "type": "email",
-              "label": "Email Address",
-              "options": {},
-              "metadata": {
-                "systemField": "email"
-              },
-              "required": true,
-              "placeholder": "Enter your email address"
-            }
-          ],
-          "isEnabled": false,
-          "welcomeMessage": "<h2>Welcome! 😃</h2><p class=\"welcome-intro\">Thank you for using our Customer Chat Service.</p><p>To get started, please fill in these details:</p>"
-        },
-        "generalSettings": {
-          "headerIcon": "https://nadia.fra1.cdn.digitaloceanspaces.com/DG.png",
-          "isChatCloseControlEnabled": true,
-          "isChatMinimizeControlEnabled": true,
+        generalSettings: {
           delayBetweenBotMessages: delay || 1000,
           messageAnimationDuration: animationDuration || 400
         },
-        "useLocalStorage": true,
-        "externalAccountKey": "4065103477",
-        "proactiveButtonsSettings": {
-          "answers": [
-            "Chat to a Stylist",
-            "Learn about our promotions",
-            "Help with an existing order"
-          ],
-          "isEnabled": false,
-          "questions": [
-            "Buy 2 Get 1 50% off! Chat to a Stylist for personal product recommendations."
-          ]
-        },
-        "widgetId": "f0c07546-af4c-4963-9e23-3e9343eaf13b",
-        "env": "dev.us"
       }
     </script>
-
     <script src="https://chat-assets.digitalgenius.com/init.alex-g-animation-new.min.js"></script>
     <script>window.dgchat.init()</script>
 
