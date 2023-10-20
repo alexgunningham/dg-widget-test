@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="style.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+  <main class="main">
+    <script>
+      const element = document.querySelector('.el1');
+       element.addEventListener("click", (e) => {
+        console.log('click!');
+        e.preventDefault();
+         window.dgchat.methods.sendMessage('Some custom message to be sent on the customers behalf');
+       }, false);
+       const element1 = document.querySelector('.el2');
+       element1.addEventListener("click", () => {
+         window.dgchat.methods.launchWidget();
+       }, false);
+    </script>
+    <script>
+        window.DG_CHAT_WIDGET_CONFIG = {
+        widgetId: 'f0c07546-af4c-4963-9e23-3e9343eaf13b',
+        env: 'dev.us',
+        version: '2.0.0-rc.16',
+        proactiveButtonsSettings: {
+          isEnabled: true,
+        },
+      }
+    </script>
+    <script src="https://chat-assets.digitalgenius.com/dgchatinit.widget.v2.1.0.min.js"></script>
+    <script>window.dgchat.init();</script>
+
+    <button onclick="sendMessage()" class="button">Send message</button>
+    <button onclick="launchWidget()" class="button">Launch widget</button>
+
+  </main>
+  <script>
+    function sendMessage() {
+      window.dgchat.methods.sendMessage('Some custom message to be sent on the customers behalf');
+    }
+
+    function launchWidget() {
+      window.dgchat.methods.launchWidget();
+    }
+  </script>
+</body>
+
+</html>
